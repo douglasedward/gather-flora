@@ -82,7 +82,7 @@ const Hero = () => {
   return (
     <section
       ref={heroRef}
-      className="bg-secondary pt-32 pb-20 md:pt-40 md:pb-32 h-svh"
+      className="bg-secondary pt-32 pb-20 md:pt-40 md:pb-32"
     >
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-3 gap-12 items-center">
@@ -161,7 +161,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="container mx-auto px-4 lg:px-72 mt-24">
+      <div className="container mx-auto px-4 lg:px-72 mt-16 lg:mt-24">
         <div className="grid grid-cols-2 gap-12">
           <div className="hero-image3 group flex items-center">
             <div className="relative h-60 md:h-80 w-40 md:w-60 rounded-xl overflow-hidden shadow-2xl transition-transform duration-500 hover:scale-x-[-1]">
