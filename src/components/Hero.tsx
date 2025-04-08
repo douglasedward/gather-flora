@@ -1,8 +1,12 @@
 import gsap from "gsap";
+import Image from "next/image";
+import { Playfair_Display } from "next/font/google";
 import { useEffect, useRef } from "react";
 import { ArrowRightIcon } from "lucide-react";
 import { Button } from "./ui/button";
-import Image from "next/image";
+import { cn } from "@/lib/utils";
+
+const playfair = Playfair_Display({ subsets: ["latin"] });
 
 const Hero = () => {
   const headerRef = useRef(null);
@@ -92,7 +96,12 @@ const Hero = () => {
                 alt="dahlia valley porcupine"
               />
             </div>
-            <div className="ml-4 flex-1 font-playfair opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+            <div
+              className={cn(
+                "ml-4 flex-1 opacity-0 transition-opacity duration-500 group-hover:opacity-100",
+                playfair.className
+              )}
+            >
               <span className="font-semibold text-lg">
                 Dahlia Valley Porcupine
               </span>
@@ -104,7 +113,12 @@ const Hero = () => {
           </div>
 
           <div className="space-y-8 text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-playfair uppercase font-bold tracking-tight">
+            <h1
+              className={cn(
+                "text-4xl md:text-5xl lg:text-6xl uppercase font-bold tracking-tight",
+                playfair.className
+              )}
+            >
               <span className="block hero-title">Connecting</span>
               <span className="block hero-title">Business</span>
               <span className="block hero-title">With Local</span>
@@ -123,7 +137,12 @@ const Hero = () => {
           </div>
 
           <div className="hero-image2 ml-auto hidden lg:flex group">
-            <div className="mr-4 flex-1 text-end font-playfair opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+            <div
+              className={cn(
+                "mr-4 flex-1 text-end opacity-0 transition-opacity duration-500 group-hover:opacity-100",
+                playfair.className
+              )}
+            >
               <span className="font-semibold text-lg">Dahlia Giddy Up</span>
               <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. A
@@ -154,7 +173,12 @@ const Hero = () => {
                 alt="dahlia valley porcupine"
               />
             </div>
-            <div className="hidden md:block ml-4 flex-1 font-playfair opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+            <div
+              className={cn(
+                "hidden md:block ml-4 flex-1 opacity-0 transition-opacity duration-500 group-hover:opacity-100",
+                playfair.className
+              )}
+            >
               <span className="font-semibold text-lg">Lupine Purple</span>
               <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. A
@@ -164,7 +188,12 @@ const Hero = () => {
           </div>
 
           <div className="hero-image3 ml-auto flex group items-center">
-            <div className="hidden md:block mr-4 flex-1 text-end font-playfair opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+            <div
+              className={cn(
+                "hidden md:block mr-4 flex-1 text-end opacity-0 transition-opacity duration-500 group-hover:opacity-100",
+                playfair.className
+              )}
+            >
               <span className="font-semibold text-lg">
                 Zinnia Zinderella Peach
               </span>
