@@ -10,13 +10,11 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <ReactLenis root>
-      <main className="flex min-h-screen flex-col">
-        <Header />
-        <Hero />
-        <Feature />
-        <CallToAction />
-        <Footer />
-      </main>
+      <Header />
+      <Hero />
+      <Feature />
+      <CallToAction />
+      <Footer />
     </ReactLenis>
   );
 }

@@ -35,9 +35,9 @@ const Header = () => {
         </nav>
 
         <Image
-          src="/GatherFlora.png"
+          src="/GatherFlora.webp"
           height={40}
-          width={120}
+          width={110}
           alt="gather flora"
           className="lg:ml-28"
         />
