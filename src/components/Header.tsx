@@ -1,6 +1,5 @@
 import gsap from "gsap";
 import Link from "next/link";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MenuIcon } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { Button } from "./ui/button";
@@ -10,8 +9,6 @@ const Header = () => {
   const headerRef = useRef(null);
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
     const tl = gsap.timeline();
 
     tl.from(headerRef.current, {
@@ -20,11 +17,6 @@ const Header = () => {
       duration: 1,
       ease: "power3.out",
     });
-
-    // Cleanup
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
   }, []);
 
   return (
@@ -60,8 +52,8 @@ const Header = () => {
           <Button className="hidden md:inline-flex cursor-pointer">
             Sign up to shop
           </Button>
-          <Button variant="ghost" size="icon" className="md:hidden">
-            <MenuIcon className="h-6 w-6" />
+          <Button variant="ghost" size="icon" className="md:hidden h-12 w-12">
+            <MenuIcon className="h-12 w-12" />
           </Button>
         </div>
       </div>
