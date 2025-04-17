@@ -22,7 +22,7 @@ const Header = () => {
   return (
     <header
       ref={headerRef}
-      className="fixed top-0 left-0 right-0 z-50 bg-secondary/80 backdrop-blur-md"
+      className="fixed top-0 left-0 right-0 z-50 bg-secondary/80 backdrop-blur-md border-b"
     >
       <div className="container mx-auto flex items-center justify-between py-4">
         <nav className="hidden md:flex items-center gap-8">
